@@ -11,4 +11,9 @@ public class Dozent {
 	public String toString(){
 		return ""+Nachname+", "+Vorname+" ("+personalNr+")";
 	}
+	
+	public static void main(String[] args) {
+		Student tester = new Student("Max", "Mustermann", 12345);
+		System.out.println(tester.toString());
+	}
 }
