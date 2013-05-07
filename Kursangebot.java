@@ -2,8 +2,8 @@
 public class Kursangebot {
 	
 	private String [] kursname = new String [5];  
-	private final int MAXUSER = 100;
-		
+	private final int MAXUSER = 10;
+	private int anmeldungen = 0;
 	
 	public Kursangebot (){
 	kursname [0] = "Programmieren 2";
@@ -21,4 +21,19 @@ public class Kursangebot {
 		return rueckgabe;
 	}
 	
+	public boolean istBerechtigt(int matrikelnummer){
+		if (matrikelnummer < 2345678){
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean istVoll (){
+		if (anmeldungen >= MAXUSER){
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
