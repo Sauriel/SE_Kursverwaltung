@@ -3,6 +3,8 @@ public class Student {
 	private String vorname;
 	private String name;
 	private int matrikelnummer;
+	private String[] belegteKurse = new String[4];
+	private int anzahlBelegteKurse = 0;
 	
 
 	public Student(String vorname, String name, int matrikelnummer) {
@@ -13,6 +15,15 @@ public class Student {
 	
 	public String toString() {
 		return "Name: " + vorname + " " + name + ", Matrikelnummer: " + matrikelnummer;
+	}
+	
+	public void kursBelegen(String kursname) {
+		if (belegteKurse < 4) {
+			belegteKurse[anzahlBelegteKurse] = kursname;
+			anzahlBelegteKurse++;
+		} else {
+			System.out.println("Du hast " + anzahlBelegteKurse + " Kurse belegt, das ist die maximale Anzahl.");
+		}
 	}
 	
 	
