@@ -25,4 +25,9 @@ public class Kursinformation {
 	public String toString() {
 		return ("Daten: " + daten + "\nAngebot: " + angebot + "\nVoraussetzungen: " + voraussetzungen);
 	}
+	
+	public static void main(String[] args) {
+		Kursinformation k = new Kursinformation("a", "b", "c");
+		System.out.println(k.toString());
+	}
 }
