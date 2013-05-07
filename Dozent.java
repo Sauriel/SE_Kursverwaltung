@@ -8,4 +8,7 @@ public class Dozent {
 		this.Nachname = Nachname;
 		this.personalNr = personalNr;
 	}
+	public String toString(){
+		return ""+Nachname+", "+Vorname+" ("+personalNr+")";
+	}
 }
